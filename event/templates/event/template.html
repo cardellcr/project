@@ -1,0 +1,53 @@
+<!--{% load staticfiles %}-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% block title %}
+          title 
+      {% endblock %}
+    </title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    {% block stylesheets %}
+       <link rel="stylesheet" type="text/css" href="{% static 'event/style.css' %}"/>
+    {% endblock %}
+
+  </head>
+  <body>
+	<div id="container">
+    <div id="header">
+        <div id="language">
+            <a href="">CAT</a>-
+            <a href="">ESP</a>-
+            <a href="">ENG</a>-
+            <a href="">DEU</a>
+        </div>
+
+        {% block header %}
+            <div id="logo">
+        			<a href="">
+                <h1><div id="name2">Mallorca Event WebSite</div></h1>
+        			</a>
+            </div>
+        {% endblock %}
+    </div>
+    <div id="menu">
+        {% block menu %}
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">   
+      <b>I'm the Footer</b>
+    </div>
+	</div>
+
+    {% block javascripts %}
+    {% endblock %}
+  </body>
+</html>

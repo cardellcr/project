@@ -1,0 +1,45 @@
+{% extends "web/template.html" %}
+{% load staticfiles %}
+
+{% block javascripts %} 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //$("#description_index").fadeIn(3000);
+        });
+    </script>
+{% endblock %}
+
+{% block menu %} 
+    <div class="menu">
+       <a href="{% url 'web:index' %}">index</a>
+       <a class="active" href="">Catàleg</a>
+       <a href="{% url 'web:contacte' %}">Contacte</a>
+    </div>
+{% endblock %}
+
+{% block content %}																							
+	<img style="margin-left:35px;" src="{% static "web/portada.jpg" %}"/>
+
+    <div id="description_cataleg">
+        <div style="margin-left: 10px;">Catàleg de productes</div>
+    </div>
+
+    <div id="description_productes"></div>
+    <div id="description_fotos_productes">
+        {% if cataleg %}
+            {% for postre in cataleg  %}
+                <img class="thumb" style="width: 70px; height: 70px;" src="{{ postre.img }}"/>
+                <h1>{{ postre.name }}</h1>
+                <h1>{{ postre.price }}</h1>
+            {% endfor %}
+        {% else %}
+            <h1>Nothing to do here</h1>
+        {% endif %}
+        <h1>Això si que se veu.</h1>
+    </div>
+    
+    <div id="description"></div>
+    
+    <div id="foto"></div>
+{% endblock %}

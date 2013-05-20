@@ -1,0 +1,25 @@
+{% extends "web/template.html" %}
+{% load staticfiles %}
+
+{% block javascripts %} 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //$("#description_index").fadeIn(3000);
+        });
+    </script>
+{% endblock %}
+
+{% block menu %} 
+    <div class="menu">
+       <a href="{% url 'web:index' %}">index</a>
+       <a href="{% url 'web:cataleg' %}">Catàleg</a>
+       <a href="" class="active">Contacte</a>
+    </div>
+{% endblock %}
+
+{% block content %}																							
+
+    <h1>This is the contact form</h1>
+
+{% endblock %}

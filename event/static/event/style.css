@@ -1,0 +1,72 @@
+html, body {
+    font: 13px/1.4 "Droid Serif",Georgia,Times,serif;
+    color: #000;
+    height: 100%;
+    background-color: #E6E6E6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Index page */
+.event_even {
+    background-color: #FFD6CC;
+}
+
+.event_odd {
+    background-color: #FFEFEB;
+}
+
+.event {
+    height: 170px;
+    margin-top: 10px;
+}
+
+.event_top {
+    height: 80px;
+}
+
+.event_image {
+    float: left;
+    width: 100px;
+    height: 80px;
+    background-color: orange;
+}
+
+.event_top_right {
+    float: left;
+}
+
+.event_right {
+    float: right;
+}
+
+.event_body {
+    height: 70px;
+}
+
+.event_bottom {
+    height: 20px;
+    background-color: #33D6CC;
+}
+
+.event_start_date {
+    float: left;
+    width: 70px;
+}
+
+.event_title {
+    padding-left: 30px;
+    width: 240px;
+}
+.event_spot {
+    float: left;
+    width: 200px;
+}
+
+.event_price {
+    float: left;
+    width: 70px;
+}
